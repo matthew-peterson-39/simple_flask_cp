@@ -14,6 +14,7 @@ students = [
  ]
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql//:matteater@localhost:/school'
 
 "http://127.0.0.1:50000/students"
 @app.route('/old_students', methods=['GET'])
